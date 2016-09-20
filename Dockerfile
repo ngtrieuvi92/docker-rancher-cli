@@ -4,7 +4,10 @@ MAINTAINER Vi Nguyen <vi.nt@geekup.vn>
 
 # Make and set workdir
 RUN mkdir /scripts
-WORKDIR /scripts
+
+# Make volume scripts and set it as a mountable  volume
+RUN mkdir /data
+VOLUME /data
 
 # Install bash shell
 RUN apk add --update bash && rm -rf /var/cache/apk/*
@@ -24,4 +27,4 @@ RUN chmod +x /scripts/run-migration.sh
 # Add config volume
 VOLUME /root/.rancher
 
-CMD ["rancher"]
+ENTRYPOINT [/bin/entrypoint.sh]
