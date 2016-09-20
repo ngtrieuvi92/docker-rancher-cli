@@ -4,14 +4,14 @@ DIR="/data"
 # init
 # look for empty director
 
-EXECUTE_SCRIPT="/data/${RANHCER_EXECUTE_SCRIPT:-'run.sh'}" 
+EXECUTE_SCRIPT="/data/${RANHCER_EXECUTE_SCRIPT:-run.sh}" 
 if [ "$(ls -A $DIR)" ]; then
     if [ "$EXECUTE_SCRIPT" ]; then 
      echo "start script $EXECUTE_SCRIPT"   
-     ./ $EXECUTE_SCRIPT
+     . $EXECUTE_SCRIPT
     else 
      echo "$EXECUTE_SCRIPT is not found!"
-     exit(1);
+     exit 1
     fi
 else 
     echo "No volumne mount, execute /scripts/run.sh"
