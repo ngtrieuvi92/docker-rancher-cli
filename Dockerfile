@@ -10,7 +10,7 @@ RUN mkdir /data
 VOLUME /data
 
 # Install bash shell
-RUN apk add --update bash && rm -rf /var/cache/apk/*
+RUN apk add --update bash docker && rm -rf /var/cache/apk/*
 
 # Add rancher config file and script to run
 ADD ./rancher /bin/rancher
