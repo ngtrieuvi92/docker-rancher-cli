@@ -3,7 +3,7 @@
 DIR="/data"
 # init
 # look for empty director
-$EXEC_FILE=${RANCHER_EXECUTE_SCRIPT:-run.sh}
+EXEC_FILE=${RANCHER_EXECUTE_SCRIPT:-run.sh}
 EXECUTE_SCRIPT="/data/$EXEC_FILE" 
 if [ "$(ls -A $DIR)" ]; then
     if [ -f "$EXECUTE_SCRIPT" ]; then 
