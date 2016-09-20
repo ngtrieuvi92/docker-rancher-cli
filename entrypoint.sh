@@ -6,7 +6,7 @@ DIR="/data"
 
 EXECUTE_SCRIPT="/data/${RANCHER_EXECUTE_SCRIPT:-run.sh}" 
 if [ "$(ls -A $DIR)" ]; then
-    if [ "$EXECUTE_SCRIPT" ]; then 
+    if [ -f "$EXECUTE_SCRIPT" ]; then 
      echo "start script $EXECUTE_SCRIPT"   
      . $EXECUTE_SCRIPT
     else 
