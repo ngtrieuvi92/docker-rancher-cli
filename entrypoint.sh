@@ -4,7 +4,7 @@ DIR="/data"
 # init
 # look for empty director
 
-EXECUTE_SCRIPT="/data/${RANHCER_EXECUTE_SCRIPT:-run.sh}" 
+EXECUTE_SCRIPT="/data/${RANCHER_EXECUTE_SCRIPT:-run.sh}" 
 if [ "$(ls -A $DIR)" ]; then
     if [ "$EXECUTE_SCRIPT" ]; then 
      echo "start script $EXECUTE_SCRIPT"   
