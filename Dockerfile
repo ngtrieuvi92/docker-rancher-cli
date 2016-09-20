@@ -27,4 +27,4 @@ RUN chmod +x /scripts/run-migration.sh
 # Add config volume
 VOLUME /root/.rancher
 
-ENTRYPOINT [/bin/entrypoint.sh]
+ENTRYPOINT "/bin/entrypoint.sh"
