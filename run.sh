@@ -54,7 +54,7 @@ function do_deploy {
   rancher up  --upgrade --stack $RANCHER_STACK_NAME --pull --interval 30000 --batch-size 1 -d
 # TODO hande update result and confirm or rollback update, bellow is cheating
   echo "# TODO hande update result and confirm or rollback update, bellow is cheating"
-  echo "sleep 120"
+  echo "sleep 20"
   sleep 20
   echo "rancher up --upgrade --stack $RANCHER_STACK_NAME --confirm-upgrade -d"
   rancher up --upgrade --stack $RANCHER_STACK_NAME --confirm-upgrade -d
